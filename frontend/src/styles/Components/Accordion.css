@@ -1,0 +1,14 @@
+@layer components {
+  .accordion {
+    @apply overflow-hidden !border-0;
+  }
+  .accordion-group-button {
+    @apply flex items-center justify-between w-full py-3.5 md:py-5 border-b border-light outline-none first:!border-b-0;
+  }
+  .accordion-button {
+    @apply text-base font-semibold text-black;
+  }
+  .accordion-body {
+    @apply py-6 border-t border-light;
+  }
+}

@@ -1,0 +1,112 @@
+@layer components {
+  .form-control {
+    @apply block px-4 pb-2.5 !pt-5 w-full text-sm text-white bg-blackRussian2 border-0  rounded-lg appearance-none outline-none focus:!outline-none focus:!ring-0 focus:!shadow-none
+  }
+  .form-control-sm {
+    @apply px-4 pb-2.5 !pt-5 text-sm;
+  }
+  .form-control-md {
+    @apply px-4 py-[6.4px] text-sm;
+  }
+  .form-control-lg {
+    @apply px-5 py-2.5 sm:py-[0.875rem];
+  }
+  .form-label {
+    @apply absolute text-sm text-aluminium duration-300 pointer-events-none transform -translate-y-1 scale-75 top-2.5 z-10 origin-[0] bg-blackRussian2 px-4 peer-focus:text-aluminium peer-focus:dark:text-aluminium peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2.5 peer-focus:scale-75 peer-focus:-translate-y-1 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1;
+  }
+  .form-check {
+    @apply flex items-center gap-3  truncate w-full;
+  }
+  .form-check-input {
+    @apply w-5 h-5 bg-white border border-primary-100 rounded-md disabled:cursor-not-allowed  relative cursor-pointer flex-shrink-0;
+  }
+  .form-check-label {
+    @apply inline-block fs-16 text-white font-medium leading-5  cursor-pointer truncate w-full;
+  }
+  .form-search-control {
+    @apply block w-full bg-transparent rounded-lg border text-sm sm:text-base font-medium border-light p-5 leading-4 pr-12 text-black  outline-none placeholder:text-black disabled:cursor-not-allowed focus:outline-none focus:ring-0 focus:border-primary-100;
+  }
+  .form-search-icon-group {
+    @apply absolute inset-y-0 right-4 flex items-center text-white text-xl  pointer-events-none ;
+  }
+  .form-search-icon {
+    @apply w-5 h-5 text-gray ;
+  }
+}
+.form-control:disabled { @apply bg-blackRussian2}
+/* input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus,
+select:-webkit-autofill:active
+ {
+  -webkit-text-fill-color: #FFFFFF;
+  -webkit-box-shadow: 0 0 0px 1000px #1E2129 inset !important;
+  border-color: #1E2129;
+} */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid #1E2129;
+  -webkit-text-fill-color: #FFFFFF;
+  -webkit-box-shadow: 0 0 0px 1000px #1E2129 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input:focus { box-shadow: none !important; }
+
+.form-control[type="search"]::-webkit-search-decoration,
+.form-control[type="search"]::-webkit-search-cancel-button,
+.form-control[type="search"]::-webkit-search-results-button,
+.form-control[type="search"]::-webkit-search-results-decoration { 
+  @apply inline-block w-3 h-3 ml-3 duration-[0.3s] transition-all ease-in-out cursor-pointer;
+  -webkit-appearance: none;
+    background: linear-gradient(45deg, rgba(0,0,0,0) 0%,rgba(121,121,122,0) 43%,#79797a 45%,#79797a 55%,rgba(121,121,122,0) 57%,rgba(121,121,122,0) 100%), linear-gradient(135deg, transparent 0%,transparent 43%,#79797a 45%,#79797a 55%,transparent 57%,transparent 100%);
+}
+
+/* textarea[type="text"] { @apply resize-none md:h-[9rem] h-28 } */
+.form-check-input[type="checkbox"] { -webkit-appearance: none; }
+.form-check-input[type="checkbox"]:checked:after {
+  content: "";
+  background: url(/assets/images/svgs/checked.svg) no-repeat;
+  background-size: 100% 100%;
+  @apply top-[-1px] left-[-1px] bg-primary-100 rounded-full text-center absolute h-5 w-5 leading-6 border-4 border-primary-100;
+}
+.form-radio-input[type="checkbox"]:checked:after { @apply rounded-full }
+.form-radio-input[type="radio"]{
+  @apply relative !border-primary-100 after:w-3 after:h-3 after:absolute after:top-1/2 after:-translate-y-1/2 after:left-1/2 after:-translate-x-1/2 after:rounded-full after:bg-transparent;
+  color: transparent !important;
+}
+.form-radio-input[type="radio"]:checked:after{ @apply bg-primary-100 border-primary-100; }
+
+.form-control[type="search"]::-webkit-search-decoration,
+.form-control[type="search"]::-webkit-search-cancel-button,
+.form-control[type="search"]::-webkit-search-results-button,
+.form-control[type="search"]::-webkit-search-results-decoration { 
+  @apply inline-block w-3 h-3 ml-3 duration-[0.3s] transition-all ease-in-out cursor-pointer;
+  -webkit-appearance: none;
+  display: none;
+    background:
+    linear-gradient(45deg, rgba(0,0,0,0) 0%,rgba(121,121,122,0) 43%,#79797a 45%,#79797a 55%,rgba(121,121,122,0) 57%,rgba(121,121,122,0) 100%),
+    linear-gradient(135deg, transparent 0%,transparent 43%,#79797a 45%,#79797a 55%,transparent 57%,transparent 100%);
+}

@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss/base";
+@import "./Components/Typo.css";
+@import "tailwindcss/components";
+@import "./Components/Button.css";
+@import "./Components/Forms.css";
+@import "./Components/Accordion.css";
+@import "./Components/Tooltip.css";
+@import "./Components/Container.css";
+@import "tailwindcss/utilities";
+
+@layer base {
+  html, body { @apply min-h-screen }
+  body { @apply !pr-0 font-Outfit overflow-x-hidden fs-16 font-normal text-dark-50 bg-blackRussian4 }
+  h1,h2,h3,h4,h5,h6{ @apply text-white font-semibold}
+  p { @apply font-normal; }
+  a { @apply text-white; }
+}
+
+@layer utilities {
+  /* =============================================
+                Theme Styling
+  ============================================= */
+  .bd { @apply border border-red-700; }
+  .wrapper,#__next { @apply min-h-[100dvh] flex flex-col w-full transition-all ease-in-out duration-700 }
+  
+  .wrapper__full { @apply !p-0 }
+  .open__wrapper { @apply pl-6 md:pl-[16.5rem] }
+  .close__wrapper { @apply pl-6 md:pl-[6.5rem] }
+  .chatBootmain{@apply pl-0 md:pl-72}
+  .main { @apply flex relative flex-grow}
+  .theme__box { @apply flex flex-col bg-white p-5 w-full rounded-xl }
+  .theme__head { @apply pb-6 w-full flex gap-1 flex-col }
+  .theme__title { @apply w-full flex flex-col }
+  .theme__heading { @apply fs-28 font-medium text-BlackForest-900 leading-8 }
+  .title__heading { @apply fs-20 font-medium text-BlackForest-900 }
+  .visa__card__icon { @apply w-10 h-6 text-cobalt border border-SilverChalice-500 rounded-md }
+  .password__eye { @apply absolute top-1/2 -translate-y-1/2 right-4 sm:text-2xl text-xl text-gray cursor-pointer }
+  .btn__viewall { @apply text-mediumslateblue-400 bg-mediumslateblue-300 bg-opacity-10 border-mediumslateblue-300 border-opacity-10 rounded-xl hover:bg-mediumslateblue-300 hover:text-mediumslateblue-400 hover:bg-opacity-20 }
+  .notify__doted { @apply w-3 h-3 rounded-full border-2 border-white bg-alizarin shrink-0 }
+  /* =============================================
+            Scrollbar Styling
+  ============================================= */
+  .themeScrollbar { @apply overflow-y-auto }
+  .themeScrollbar::-webkit-scrollbar {
+    @apply w-[4px] h-[8px] bg-transparent rounded-lg;
+    /* box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.25); */
+  }
+  .themeScrollbar::-webkit-scrollbar-thumb { @apply w-[4px] h-[8px] bg-gradient-to-b from-[#30C5D2]  to-[#471069] rounded-lg }
+  .AtScrollNone{
+    scrollbar-width: none;
+    -webkit-scrollbar-width: none;
+  }
+}
+
+.textOutline{
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.otpinput-box > div{
+  @apply gap-2
+}
+
+.otpinput-box input{
+  @apply !w-full border-0 rounded-md text-2xl text-white bg-blackRussian2
+}
+.otpinput-box span{@apply text-aluminium}
+.text-gradient{
+  background: linear-gradient(to right, #30C5D2, #471069);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.rt-deleteDropdown { @apply hidden }
+.rt-titlePlusIconPlusDropdown:hover .rt-deleteDropdown { @apply block }
+.rt-titlePlusIconPlusDropdown:hover + .rt-tooltip { @apply hidden }

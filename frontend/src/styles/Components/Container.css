@@ -1,0 +1,20 @@
+@layer components {
+    .container-xs {
+        @apply mx-auto px-4 sm:px-5 md:max-w-2xl md:px-4 lg:px-2;
+    }
+    .container-sm {
+        @apply mx-auto px-4 sm:px-5 md:max-w-2xl md:px-4 lg:max-w-4xl lg:px-3;
+    }
+    .container-md {
+        @apply mx-auto px-4 sm:px-5 md:max-w-2xl md:px-4 lg:max-w-5xl lg:px-3;
+    }
+    .container-lg {
+        @apply mx-auto px-4 sm:px-5 md:max-w-2xl md:px-4 lg:max-w-7xl lg:px-3;
+    }
+    .container-xl {
+        @apply mx-auto px-4 sm:px-5 md:max-w-4xl md:px-4 xl:max-w-desktop w-full;
+    }
+    .container-xxl {
+        @apply mx-auto xs:px-5 px-7 md:max-w-7xl xl:max-w-3xl w-full;
+    }
+}

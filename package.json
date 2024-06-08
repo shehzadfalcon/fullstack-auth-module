@@ -1,0 +1,13 @@
+{
+    "name": "fullstack-auth-module",
+    "version": "1.0.0",
+    "scripts": {
+        "frontend": "npm run dev --prefix frontend",
+        "backend": "npm run start:dev --prefix backend",
+        "start": "concurrently \"npm run frontend\" \"npm run backend\"",
+        "prepare": "husky install"
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    }
+}

@@ -1,0 +1,36 @@
+@layer components {
+  .btn {
+    @apply cursor-pointer flex justify-center items-center flex-1 min-w-fit gap-2.5 rounded-lg shadow-sm disabled:cursor-not-allowed whitespace-nowrap transition-all ease-in-out duration-1000 focus:outline-none;
+  }
+  .btn-link{ @apply text-primary-100 font-medium cursor-pointer }
+  .btn-outline {
+    @apply flex justify-center items-center border rounded-lg disabled:cursor-not-allowed whitespace-nowrap transition-all ease-in-out duration-[0.4s];
+  }
+  .btn-sm {
+    @apply px-3 sm:px-[1.094rem] py-[4px] sm:py-[7px] text-sm;
+  }
+  .btn-md {
+    @apply py-2 px-4 fs-16;
+  }
+  .btn-lg {
+    @apply py-2.5 lg:py-[0.75rem] fs-16 px-5 lg:px-[1.75rem];
+  }
+  .btn-primary {
+    @apply text-white active:text-white/80 disabled:opacity-30 disabled:hover:bg-primary-100;
+    background-size:300% 100%;
+    background-image: linear-gradient(to right, #30C5D2, #471069, #30C5D2, #471069);
+  }
+  .btn-primary:hover {
+  @apply transition-all ease-in-out duration-1000;
+  background-position: 100% 0;
+}
+  .btn-secondary {
+    @apply text-primary-100 bg-white hover:bg-white/90 active:bg-white/90 active:text-white/80 disabled:opacity-30 disabled:hover:bg-white disabled:hover:text-black;
+  }
+  .btn-outline-secondary {
+    @apply border border-primary-100 text-primary-100 active:text-primary-100 disabled:opacity-40 disabled:hover:border-primary-100 disabled:hover:bg-transparent;
+  }
+  .btn-outline-primary {
+    @apply border border-tuna flex-1 min-w-fit hover:opacity-70 text-white active:text-white disabled:opacity-40 disabled:hover:border-white disabled:hover:bg-transparent;
+  }
+}

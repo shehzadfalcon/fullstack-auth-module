@@ -1,0 +1,20 @@
+@layer components {
+  .tooltip {
+    @apply pointer-events-none absolute z-20 text-center sm:whitespace-nowrap sm:w-auto w-full rounded-md  px-2 py-1 text-sm text-black before:absolute before:border-[6px] before:border-transparent before:content-[''] ease-in-out hover:transition-all hover:duration-[0.4s];
+  }
+  .tooltip-left {
+    @apply top-1/2 right-[110%] -translate-y-1/2 before:top-1/2 before:left-full before:-translate-y-1/2 before:border-l-black bg-white;
+  }
+  .tooltip-right {
+    @apply  right-6 -top-2 before:top-1/2 before:left-full before:-translate-y-1/2 before:border-l-white bg-white;
+  }
+  .tooltip-info {
+    @apply -translate-x-1/2 bottom-[calc(100%_+_1.5rem)] -left-[300%] xl:left-1/2 before:left-[90%] xl:before:left-1/2 before:top-full before:-translate-x-1/2  before:border-t-blackRussian2 bg-blackRussian2 w-[163px] 2xl:w-[280px] text-wrap text-white p-4 text-sm;
+  }
+  .tooltip-top {
+    @apply -translate-x-1/2 bottom-[calc(100%_+_0.7rem)] left-1/2 before:left-1/2 before:top-full before:-translate-x-1/2 before:border-t-blackRussian2 bg-blackRussian2 text-wrap text-white p-2 px-3 text-sm;
+  }
+  .tooltip-bottom {
+    @apply -translate-x-1/2 -bottom-10 left-1/2 before:left-1/2 before:bottom-full before:-translate-x-1/2 before:border-b-black;
+  }
+}
