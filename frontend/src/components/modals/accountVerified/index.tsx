@@ -1,4 +1,4 @@
-import { useModal } from "@ebay/nice-modal-react";
+import NiceModal, { useModal } from "@ebay/nice-modal-react";
 import React from "react";
 import BasicModal from "../../global/basicmodal/BasicModal";
 import Image from "next/image";
@@ -23,7 +23,7 @@ interface AccountVerifiedProps {
  * @param {AccountVerifiedProps} props - The props for the AccountVerified component.
  * @returns {JSX.Element} - The AccountVerified JSX element.
  */
-const AccountVerified: React.FC<AccountVerifiedProps> = ({ response }) => {
+const AccountVerified = NiceModal.create(({ response }: any) => {
   const router = useRouter();
   const [handleClick, loadingStates] = useDebouncedClick();
   const modal = useModal();
@@ -80,6 +80,6 @@ const AccountVerified: React.FC<AccountVerifiedProps> = ({ response }) => {
       </div>
     </BasicModal>
   );
-};
+});
 
 export default AccountVerified;
