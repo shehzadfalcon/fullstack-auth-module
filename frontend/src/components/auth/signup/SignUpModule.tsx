@@ -11,6 +11,7 @@ import {
 import { useDebouncedClick } from "../../../hooks/useDebouncedClick";
 import { authService } from "../../../services/auth.service";
 import { errorHandler } from "../../../utils/errorHandler";
+import Link from "next/link";
 
 /**
  * SignupModule component handles the sign-up process.
@@ -121,6 +122,11 @@ const SignupModule = (): JSX.Element => {
         >
           Sign Up
         </Button>
+      </div>
+      <div className="form-group text-center">
+        <Link href="/login" className="text-sm text-blue-500">
+          Already have an account? Login
+        </Link>
       </div>
     </>
   );

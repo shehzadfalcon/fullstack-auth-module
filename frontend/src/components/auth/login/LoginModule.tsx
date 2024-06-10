@@ -126,9 +126,12 @@ const LoginModule = () => {
           className="text-blackrussian !pr-[50px]"
         />
       </div>
-      <div className="form-group mb-8 flex items-center justify-end">
+      <div className="form-group mb-8 flex items-center justify-between pt-2">
         <Link href="/forgot-password" className="text-sm !text-white">
           Forgot Password?
+        </Link>
+        <Link href="/signup" className="text-sm text-blue-500">
+          Dont have an account? Register
         </Link>
       </div>
 
