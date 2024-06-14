@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a full-stack web application with the frontend built using Next.js and the backend built using Nest.js. Both frontend and backend are running concurrently.
+This is a full-stack web application with the frontend built using Next.js and the backend built using Nest.js. Both frontend and backend are running refrshly.
 
 ## Technologies Used
 
